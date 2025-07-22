@@ -1,0 +1,118 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6mi0kjcu2r20"]
+
+[ext_resource type="Script" uid="uid://3608jnb0be05" path="res://src/star_hold.gd" id="1_d1g7e"]
+
+[sub_resource type="Theme" id="Theme_0axv1"]
+
+[node name="StarHold" type="Node"]
+script = ExtResource("1_d1g7e")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0axv1")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="UI/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PanelContainer/VSplitContainer"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UI/PanelContainer/VSplitContainer"]
+layout_mode = 2
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/PanelContainer/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "IDLE 2 RULE the STARS"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "★★★★★★★★★★★★★"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Age" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Age: 13"
+horizontal_alignment = 1
+
+[node name="Wealth" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Wealth: 1 Slip, \\n10 Satoshi"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Profit" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Profit: 0"
+horizontal_alignment = 1
+
+[node name="Occupation" type="VBoxContainer" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Occupation"]
+layout_mode = 2
+text = "Occupation:"
+
+[node name="OcType" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Occupation"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Drill Kid"
+horizontal_alignment = 1
+
+[node name="TimeTilPatcheck" type="ProgressBar" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Occupation"]
+layout_mode = 2
+
+[node name="Hobby" type="VBoxContainer" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Hobby"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Hobby"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer/Hobby"]
+layout_mode = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "LOG:"
+fit_content = true
+
+[node name="TabContainer" type="TabContainer" parent="UI/PanelContainer/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+current_tab = 0
+
+[node name="Asteroid" type="Control" parent="UI/PanelContainer/VSplitContainer/HSplitContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
